@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/loadingView"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scrollbars="vertical"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/subtleGray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="gone"
+        android:id="@+id/loadingView"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:id="@+id/errorLayout"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_error_black_64dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:text="An unexpected error occurred, please check your network connection and restart."/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/subtleGray"
+        android:gravity="center"
+        android:id="@+id/fullLoading"
+        android:orientation="horizontal">
+
+        <ProgressBar
+            android:layout_width="86dp"
+            android:layout_height="86dp" />
+
+    </LinearLayout>
+
+
+
+
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">My Reddit Feed</string>
+    <string name="title_android">Android</string>
+    <string name="title_facebook">Facebook</string>
+    <string name="title_surf">Surfing</string>
+</resources>
